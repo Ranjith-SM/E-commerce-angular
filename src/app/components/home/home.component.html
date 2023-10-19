@@ -1,0 +1,96 @@
+
+<!-- carusal -->
+<div class="float-end">
+  <button class="btn btn-success" routerLink="/login" [ngClass]="islogged() ? 'd-none' : 'd-block' ">Login To Shop</button>
+</div>
+<br>
+<div
+  id="carouselExampleControls"
+  class="carousel carousel-dark slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner" style="width: 100%; height: 550px !important">
+    <div class="carousel-item active">
+      <img
+        src="https://wallpapercave.com/wp/wp5470800.jpg"
+        style="height: 550px"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://wallpaperaccess.com/full/2484162.png"
+        style="height: 550px"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://wallpaperaccess.com/full/2593133.jpg"
+        style="height: 550px"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+  </div>
+
+  <button
+    class="carousel-control-prev text-dark"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon text-dark"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next text-dark"
+    type="button"
+    data-bs-target="#carouselExampleControls"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon text-dark"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- products body -->
+
+<div class="my-3 text-center"><h3>Products</h3></div>
+<div
+  class="container-fluid d-flex bg-trasparent my-4 px-5 p-3 "
+  
+>
+  <div class="row  ">
+    <div class="col-3 my-3" *ngFor="let product of products">
+      <div class="card h-100 shadow-sm">
+        <img
+          [src]="product.image"
+          alt={{product.title}}
+        />
+        <div class="clearfix text-center">
+          <span class="justify-content-center float-lg-none badge rounded bg-primary text-wrap  my-2">
+            {{product.title}}
+          </span> <br>
+
+          <span class=" price-hp mx-4 badge rounded bg-info justify-content-center">Price :₹{{product.price}}</span>
+
+          <div class="text-center  mx-2">
+            <p>
+              {{product.description | slice:0:60}}...
+            </p>
+
+            <button class="btn btn-success" (click)="addtoCart(product.id)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    
+
+  </div>
+</div>

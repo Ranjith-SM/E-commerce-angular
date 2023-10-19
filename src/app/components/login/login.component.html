@@ -1,0 +1,153 @@
+<!-- login page -->
+
+<!-- <div class="container my-5">
+  <div class="form-container">
+    <div class="login">
+      <h1>Create Account</h1>
+
+      <input type="text" id="namer" placeholder="Name" />
+      <input type="number" id="num" placeholder="Phone No" />
+      <input type="email" id="emailr" placeholder="Email" />
+      <label for="gender" style="text-align: left">Gender</label>
+      <p id="errorr" class="text-danger"></p>
+
+      <button>Sign Up</button>
+    </div>
+  </div>
+
+  <div class="form-container sign-in-container">
+    <div class="login">
+      <h1>Sign in</h1>
+      <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+        <input
+          type="email"
+          id="emailsign"
+          placeholder="Email"
+          
+          name="email"
+          ngModel
+          email
+          required
+          #modelEmail="ngModel"
+          
+          [ngClass]=" modelEmail.valid && modelEmail.dirty ? 'is-invalid' : '' "
+        />
+        {{modelEmail.value}}
+
+        <input
+          type="password"
+          id="passsign"
+          placeholder="Password"
+          name="password"
+          ngModel
+          password
+          #modelpass="ngModel"
+          required
+        />
+        <p id="errors" class="text-danger"></p>
+
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <button class="ghost" id="signUp">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<section class="vh-90 my-5">
+  <div class="container py-2 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-3-strong" style="border-radius: 1rem">
+          <div class="card-body p-2 text-center">
+            <h3 class="mb-4">Sign in</h3>
+
+            <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+              <div class="form-outline mb-4">
+                <label class="form-label text-start" for="typeEmailX-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="typeEmailX-2"
+                  class="form-control form-control-lg"
+                  name="email"
+                  ngModel
+                  email
+                  required
+                  #modelEmail="ngModel"
+                  [ngClass]="
+                    modelEmail.invalid && modelEmail.dirty ? 'is-invalid' : ''
+                  "
+                />
+              </div>
+
+              <div class="form-outline mb-4">
+                <label class="form-label" for="typePasswordX-2">Password</label>
+                <input
+                  type="password"
+                  id="typePasswordX-2"
+                  class="form-control form-control-lg"
+                  name="password"
+                  minlength="8"
+                  ngModel
+                  required
+                  #modelPass="ngModel"
+                  [ngClass]="
+                    modelPass.invalid && modelPass.dirty ? 'is-invalid' : ''
+                  "
+                />
+                
+                <div
+                  *ngIf="modelPass.errors?.['required'] && modelPass.dirty"
+                  class="invalid-feedback"
+                >
+                  Please Enter a valid password
+                </div>
+
+                <div
+                  *ngIf="modelPass?.errors?.['minlength']"
+                  class="invalid-feedback"
+                >
+                  Please enter atleast
+
+                  {{modelPass?.errors?.['minlength']?.['requiredLength']
+
+                  }}
+
+                </div>
+              </div>
+
+              <div *ngIf="error.length > 0" class="text-danger">{{error}}</div>
+
+              <button
+                class="btn btn-primary btn-lg btn-block"
+                type="submit"
+                name="submit"
+                [disabled]="loginForm.invalid"
+              >
+                <!-- [ngClass]="loginForm.invalid ? 'disabled' : '' " -->
+                Login
+              </button>
+
+              <p>Don't have an Account : <a routerLink="../register">Create an Account</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
