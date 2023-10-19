@@ -1,0 +1,150 @@
+<div class="container">
+  <section class="mx-auto py-5" style="max-width: 100rem">
+    <div class="card">
+      <div class="card-body">
+        <blockquote class="blockquote blockquote-custom bg-white px-3 pt-4">
+          <h3>Information About the Project: E-commerce Application</h3>
+          <div class="blockquote-custom-icon bg-info shadow-1-strong">
+            <i class="fa fa-quote-left text-white"></i>
+          </div>
+          <footer class="pt-4 mt-4 border-top"></footer>
+
+          <div class="container">
+            <div class="row">
+              <div class="mb-0 mt-2 font-italic col-6">
+                <span class="h5">Technology Used:</span>
+                <ul>
+                  <li>HTML 5</li>
+                  <li>CSS 3</li>
+                  <li>Bootstrap V-5.3</li>
+                  <li>Angular Framework V-16</li>
+                </ul>
+              </div>
+
+              <div class="container col-6">
+                <div class="row">
+                  <div class="col-6">
+                    <h5>Components Created:</h5>
+                    <ul>
+                      <li>Register</li>
+                      <li>Login</li>
+                      <li>Home</li>
+                      <li>Cart</li>
+                      <li>Navbar</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-6">
+                    <h5>Models (Interface):</h5>
+                    <ul>
+                      <li>cart</li>
+                      <li>product</li>
+                      <li>user</li>
+                    </ul>
+                  </div>
+
+                  <div class="col-6">
+                    <h5>Services:</h5>
+                    <ul>
+                      <li>Auth</li>
+                      <li>Cart</li>
+                      <li>Product</li>
+                      <li>Storage</li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <h5>Shared: (Guard file)</h5>
+                    <ul>
+                      <li>Auth</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-4 mt-4 border-top"></div>
+
+              <div>
+                <h5>
+                  Steps used and challenges faced to build this application:-
+                </h5>
+                <ol>
+                  <li>
+                    This Project consists of multiple components such as Home,
+                    Cart, Login, Register and Orders and for the navigation
+                    between components Routing has been used via app routing
+                    module by providing respective routes in the route array.
+                  </li>
+                  <li>
+                    The respective service and models required for the
+                    application has been generated using the commands in git
+                    bash
+                  </li>
+                  <li>
+                    Used Template Driven form validation for the login and
+                    register page.
+                  </li>
+                  <li>
+                    For fetching the products an Api call has been made using
+                    HTTPClient (GET) request.
+                  </li>
+                  <li>
+                    Stored the product, cart and order details in the Local
+                    Storage . Stored the user details in the Session Storage.
+                  </li>
+                  <li>
+                    The add to cart and orders functionality logic has been
+                    designed in a logic that each user can access only his/her
+                    cart and order details in his/her login.
+                  </li>
+                  <li>
+                    No logged in user can access cart order and log out so for
+                    that CanActivate() method of auth guard in angular. For this
+                    process session storage has been used.
+                  </li>
+                  <li>
+                    Every Authenticated user can access cart to add or remove
+                    product also check out product to see it the orders page.
+                  </li>
+                </ol>
+
+                <div class="pt-4 mt-4 border-top"></div>
+
+                <h5>Challenges:</h5>
+                <ul>
+                  <li>
+                    Frequent API call - Used Observer() method to reduce the API
+                    call by fetching and checking it with the local storage.
+                  </li>
+                  <li>Handling Cart for individual user.</li>
+                </ul>
+
+                <div class="pt-4 mt-4 border-top"></div>
+
+                <h5>
+                  To test the Page : Please use the below login Credentials
+                </h5>
+                <ul>
+                  <li>Email: ranjith@kumaran.com</li>
+                  <li>Password: ranjith36</li>
+                </ul>
+                <p>
+                  you can also add/ register and login with the same credentials
+                </p>
+
+                <div class="pt-4 mt-4 border-top"></div>
+              </div>
+            </div>
+          </div>
+        </blockquote>
+
+        <button
+          class="btn btn-outline-success"
+          routerLink="../register"
+          (click)="continue()"
+        >
+          Continue to the Project
+        </button>
+      </div>
+    </div>
+  </section>
+</div>

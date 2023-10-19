@@ -18,14 +18,11 @@
     <div class="collapse navbar-collapse navtext" id="navbarNavDropdown">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
-          <a class="nav-link mx-2 " routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+          <a class="nav-link mx-2 active" routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
             ><i class="fa-solid fa-square-h"></i>Home</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" routerLink="cart" routerLinkActive="active"
-            ><i class="fa-solid fa-cart-shopping"></i>Cart {{getcount() > 0 ? getcount() : '' }}</a>
-        </li>
+        
         <li class="nav-item d-none d-lg-block">
           <a class="nav-link mx-2" routerLink="home">
             <img
@@ -34,12 +31,17 @@
             />
           </a>
         </li>
+
         <li class="nav-item">
+          <a class="nav-link mx-2" routerLink="cart" routerLinkActive="active"
+            ><i class="fa-solid fa-cart-shopping"></i>Cart {{getcount() > 0 ? getcount() : '' }}</a>
+        </li>
+        <!-- <li class="nav-item">
           <a class="nav-link mx-2" routerLink="orders" routerLinkActive="active"><i class="fa-solid fa-store"></i>Orders</a>
         </li>
         <li class="nav-item">
           <a class="nav-link mx-2" routerLink="login" routerLinkActive="active"><i class="fa-solid fa-user"></i>Profile</a>
-        </li>
+        </li> -->
       </ul>
     </div>
 

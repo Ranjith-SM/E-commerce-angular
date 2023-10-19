@@ -12,6 +12,7 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
+import { InstructionComponent } from './components/instruction/instruction.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     CartComponent,
     OrdersComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    InstructionComponent
   ],
   imports: [
     BrowserModule,

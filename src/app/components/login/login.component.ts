@@ -21,7 +21,7 @@ export class LoginComponent {
 
 onSubmit(loginForm:NgForm) {
   if(this.auth.validuser(loginForm.value)) { 
-    this.route.navigate(['/'], {replaceUrl:true})
+    this.route.navigate(['home'], {replaceUrl:true})
   }else {
     this.error="Invalid Credentials!!!";
   }
